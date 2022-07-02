@@ -28,7 +28,7 @@ class Student{
 
 var std = new Student();
 std.setName('Raju Ahmed');
-std.setMarks(180)
+std.setMarks(90)
 
 console.log(std.getName());
 console.log(std.getMarks());

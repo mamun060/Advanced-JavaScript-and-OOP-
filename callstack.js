@@ -1,13 +1,13 @@
 // here I write js call stack life cycle
 function a(){
     setTimeout(() => {
-        console.log('Hello a')
+        console.log('Hello A')
     }, 5000);
 }
 
 function b(){
    setTimeout(() => {
-        console.log('Hello b');
+        console.log('Hello B');
    }, 4000);
 }
 

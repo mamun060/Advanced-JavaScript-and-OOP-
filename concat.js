@@ -6,4 +6,3 @@ const brand = ['A' , 'B' , 'C', 'D'];
 const finalConcatArray = car.concat(brand);
 
 console.log(finalConcatArray);
-

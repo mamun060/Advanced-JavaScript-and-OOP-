@@ -9,9 +9,9 @@ function checkValue(num){
 let newArray = arrNum.filter(checkValue)
 // OR
 let updateArray = arrNum.filter((value)=> {
-    return value < 20;
+    return value == 20 || value > 20;
 });
 
 console.table(arrNum)
 console.table(newArray)
-console.table(updateArray)
+console.log(updateArray)

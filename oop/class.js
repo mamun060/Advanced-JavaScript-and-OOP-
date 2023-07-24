@@ -15,9 +15,9 @@ class myClass {
 
 // declare object under class value reuse 
 
-var objectOne = new myClass(01, 'Md Al Mamun' , 21);
-var objectTwo = new myClass(01, 'Md Al Mamun' , 21);
-var objectThree = new myClass(01, 'Md Al Mamun' , 21);
+var objectOne = new myClass(1, 'Md Al Mamun' , 21);
+var objectTwo = new myClass(2, 'Md Al Mamun' , 22);
+var objectThree = new myClass(3, 'Md Al Mamun' , 23);
 
 
 objectOne.display();

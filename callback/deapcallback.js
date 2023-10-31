@@ -22,4 +22,5 @@ function score(){
 
 
 // main function call
+score();
 callback(score , score, score )

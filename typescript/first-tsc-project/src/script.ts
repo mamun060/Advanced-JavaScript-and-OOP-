@@ -1,4 +1,5 @@
-const test = () =>{
-    return "Test Arrow Funciton"
-}
+let firstName = "MD Al Mamun";
 
+firstName = 25;
+
+console.log(name);

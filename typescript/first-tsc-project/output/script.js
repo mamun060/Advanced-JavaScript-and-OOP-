@@ -1,7 +1,4 @@
 "use strict";
-const test = () => {
-    return "Test Arrow Funciton";
-};
-
-
-console.log(test());
+let firstName = "MD Al Mamun";
+firstName = 25;
+console.log(name);

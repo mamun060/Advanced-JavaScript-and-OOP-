@@ -18,3 +18,16 @@ console.log(result(2,3));
 // The Function() Constructor
 const constructorFunction = new Function("a" , "b" , "return a * b")
 console.log(constructorFunction(5, 4));
+
+
+// function hoisting 
+myName()
+
+function myName(){
+    console.log("My name is Raju ");
+}
+
+// Self-Invoking Functions
+(function(){
+    console.log("this is self invoked function");  
+}())

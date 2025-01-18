@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
 
 const arry = ['a', 'b', 'c', 'd', 'e'];
@@ -7,3 +8,10 @@ const arry = ['a', 'b', 'c', 'd', 'e'];
 // copyWithin( 1, 3) first perameter ta holo jei position a copy kore bosabe oi position index 
 // second perameter ta  holo sei index jei index ar data ta copy kore perameter first ar index a copy kore niye jabe
 console.log(arry.copyWithin(1, 3));
+=======
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let child = fruits.copyWithin(2,0);
+
+console.log(child);
+>>>>>>> 401783636657324486dc91424ffbee7e1f5118a8

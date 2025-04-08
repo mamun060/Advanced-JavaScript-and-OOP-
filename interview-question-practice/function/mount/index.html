@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice DOM mount</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+        <h1>Mounting</h1>
+        <p>Mounting is the process of inserting a component into the DOM.</p>
+        <p>In React, this is done using the <code>ReactDOM.render()</code> method.</p>
+        <p>In this example, we will mount a simple component to the DOM.</p>
+        <button id="show" onclick="mount()" style="background-color: blue; color: white; padding: 5px 10px; border-radius: 5px;" id="root">
+            click me
+        </button>
+
+        <button id="hide" onclick="unmount()" style="background-color: red; color: white; padding: 5px 10px; border-radius: 5px;" id="root">
+            hide mount
+        </button>
+
+        <div id="add"></div>
+    </div>
+<script src="mount.js"></script>
+</body>
+</html>

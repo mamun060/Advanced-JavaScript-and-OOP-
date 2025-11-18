@@ -1,8 +1,9 @@
-# 🧩 Basic Differences
-Keyword	Scope	Hoisting	Re-declare	Re-assign
-var	Function scope	Hoisted (initialized as undefined)	✅ Yes	✅ Yes
-let	Block scope	Hoisted (NOT initialized — TDZ)	❌ No	✅ Yes
-const	Block scope	Hoisted (NOT initialized — TDZ)	❌ No	❌ No
+## 🧩 Basic Differences
+| **Keyword** | **Scope**      | **Hoisting**                           | **Re-declare** | **Re-assign** |
+| ----------- | -------------- | -------------------------------------- | -------------- | ------------- |
+| **var**     | Function scope | Hoisted *(initialized as `undefined`)* | ✅ Yes          | ✅ Yes         |
+| **let**     | Block scope    | Hoisted *(NOT initialized — TDZ)*      | ❌ No           | ✅ Yes         |
+| **const**   | Block scope    | Hoisted *(NOT initialized — TDZ)*      | ❌ No           | ❌ No          |
 
 ## 🧠 Scope Explained
 

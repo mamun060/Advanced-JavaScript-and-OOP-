@@ -1,4 +1,5 @@
-// A callback is a function passed as an arguemnt to another fuctnion, this technique allows a function to call another function 
+// A callback is a function passed as an arguemnt to another fuctnion, 
+// this technique allows a function to call another function 
 
 // For example
 function display(something){

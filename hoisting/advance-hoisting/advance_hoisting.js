@@ -1,5 +1,5 @@
 console.log(raju)
-var raju = 'Hello Razu'
+var raju = 'Hello Raju'
 console.log(raju)
 
 

@@ -49,7 +49,9 @@ const testthree = (department) =>{
     return promise
 }
 
-
+function display(value){
+    console.log(value);
+}
 
 // this is the way to chainning function to step ways setp check first
 
@@ -61,7 +63,6 @@ test("mamun")
         console.log(error);
     }
 )
-
 
 // convert all promise to an array using race method .. syntax Promise.race()
 Promise.race([test("mamun"), testtwo(21), testthree("cse")]).then(

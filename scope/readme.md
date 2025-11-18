@@ -30,9 +30,9 @@ function test() {
   const c = 30;
 }
 
-console.log(a); // ❌ Error
-console.log(b); // ❌ Error
-console.log(c); // ❌ Error
+console.log(a); // Error
+console.log(b); // Error
+console.log(c); // Error
 
 // Why?
 //  A function creates its own isolated environment → local scope
@@ -52,10 +52,10 @@ if (true) {
   const y = 2;
 }
 
-console.log(x); // ❌ Error
-console.log(y); // ❌ Error
+console.log(x); // Error
+console.log(y); // Error
 
-var DOES NOT follow block scope:
+// var DOES NOT follow block scope:
 if (true) {
   var z = 3;
 }

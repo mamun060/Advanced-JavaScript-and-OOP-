@@ -80,3 +80,16 @@ function outer() {
 outer();
 // inner() can access count because it is inside outer()’s lexical scope.
 ```
+
+
+### Lexical-chain
+Lexical” মানে হলো:
+  - যেখানে কোড লেখা হয়েছে (written position)
+    JavaScript how functions are physically written — সেই অনুযায়ী scope তৈরি করে।
+    Runtime-এ কোথা থেকে call করা হলো সেটা matter করে না।
+
+What is Lexical Chain (Scope Chain)?
+Lexical Chain হলো:
+  একটার ভিতরে আরেকটা function / block তৈরি হলে,
+  তাদের parent scopes গুলোকে যে link বা chain ধরে JS খুঁজে variable বের করে — সেই chain ই হলো Lexical Chain।
+একে scope chain ও বলা হয়।

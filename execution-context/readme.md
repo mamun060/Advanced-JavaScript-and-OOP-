@@ -4,6 +4,31 @@
 | **var**     | Function scope | Hoisted *(initialized as `undefined`)* | ✅ Yes          | ✅ Yes         |
 | **let**     | Block scope    | Hoisted *(NOT initialized — TDZ)*      | ❌ No           | ✅ Yes         |
 | **const**   | Block scope    | Hoisted *(NOT initialized — TDZ)*      | ❌ No           | ❌ No          |
+| **function**| Function scope | 
+
+### Function scope and hoisting: function scope is function scope
+```js
+//Function Expression → Hoisted but NOT initialized → TDZ
+hello(); // ReferenceError (hello is not defined)
+
+var hello = function() {
+  console.log("Hi");
+};
+
+// let/const Function Expression → hoisted + TDZ
+hello(); // ReferenceError
+
+const hello = function() {
+  console.log("Hi");
+};
+
+// Function Declaration → Fully hoisted
+hello(); // OK
+
+function hello() {
+  console.log("Hi");
+}
+```
 
 ## 🧠 Scope Explained
 

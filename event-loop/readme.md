@@ -33,6 +33,7 @@ The runtime consists of several key parts that work together to execute your cod
                                     │   (Macrotasks)   │
                                     └──────────────────┘
 ```
+#### Call Stack 
 ├── Call Stack
 │     ├── Executes JS code line-by-line
 │     ├── Synchronous execution

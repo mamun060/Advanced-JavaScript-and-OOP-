@@ -1,29 +1,38 @@
-### JavaScript Event Loop — Deep & Clean Explanation
-Overview
-JavaScript is a single-threaded, synchronous language — meaning it can run only one line at a time on the call stack. But it still handles asynchronous tasks like timers, network requests, and promises without blocking.
-This is possible because of the Event Loop.
+# The JavaScript Event Loop: A Deep Dive
 
-### JavaScript Runtime Architecture
-┌──────────────────────┐
-│      Call Stack      │
-└──────────────────────┘
-           ▲
-           │
-┌──────────────────────┐
-│     Event Loop       │
-└──────────────────────┘
-           ▲
-           │
-┌──────────────────────┐
-│  Web APIs / Node APIs│
-└──────────────────────┘
-           ▲
-           │
-┌──────────────────────┐         ┌───────────────────────────┐
-│     Task Queue       │         │     Microtask Queue       │
-│ (Macrotasks)         │         │ (Promises, MutationObs)   │
-└──────────────────────┘         └───────────────────────────┘
+## Overview
 
+JavaScript is fundamentally a **single-threaded**, **synchronous** language. This means it can only execute one piece of code at a time in a specific order. However, it can perform non-blocking, asynchronous operations like fetching data from a server or handling user input.
+
+This seemingly contradictory behavior is made possible by the JavaScript runtime environment (like a browser or Node.js) and its core component: the **Event Loop**.
+
+---
+
+## JavaScript Runtime Architecture
+
+The runtime consists of several key parts that work together to execute your code.
+
+```js
+                               ┌──────────────────┐
+                               │    Call Stack    │
+                               └──────────────────┘
+                                       ▲
+                                       │
+                            ┌──────────────────┐
+                            │    Event Loop    │
+                            └──────────────────┘
+                              ▲             │
+                              │             ▼
+┌─────────────────────────┐   │   ┌──────────────────────┐
+│     Microtask Queue     │◄──┘   │  Web APIs / Node APIs│
+│ (Promises, async/await) │       └──────────────────────┘
+└─────────────────────────┘                   │
+                                              ▼
+                                    ┌──────────────────┐
+                                    │     Task Queue   │
+                                    │   (Macrotasks)   │
+                                    └──────────────────┘
+```
 
 ### Key Components
 1️⃣ Call Stack

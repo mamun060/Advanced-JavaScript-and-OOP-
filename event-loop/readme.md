@@ -33,42 +33,46 @@ The runtime consists of several key parts that work together to execute your cod
                                     │   (Macrotasks)   │
                                     └──────────────────┘
 ```
-
-### Key Components
-1️⃣ Call Stack
-        Executes JavaScript code line-by-line
-        Follows LIFO (Last In, First Out)
-        Synchronous operations run here
-
-2️⃣ Web APIs / Node APIs
-    Handles asynchronous tasks:
-        setTimeout, setInterval
-        DOM events
-        Fetch / AJAX / XHR
-        Promises (microtasks)
-        File system operations (Node.js)
-        These tasks are executed outside the call stack.
-
-3️⃣ Task Queue (Macrotask Queue)
-    Stores callbacks from:
-        setTimeout
-        setInterval
-        DOM event handlers
-        MessageChannel
-        setImmediate (Node.js)
-        Executed after microtasks.
-
-4️⃣ Microtask Queue
-    Contains:
-        Promise.then()
-        Promise.catch()
-        async/await continuation
-        MutationObserver
-        Microtasks have higher priority than macrotasks.
-
-5️⃣ Event Loop
-    The “manager” that keeps everything running.
-    Its job:
-        Check if the Call Stack is empty
-        If empty → run all Microtasks
-        When Microtasks are done → run one Macrotask
+├── Call Stack
+│     ├── Executes JS code line-by-line
+│     ├── Synchronous execution
+│     ├── Follows LIFO (Last In, First Out)
+│     └── Must be empty before async callbacks run
+│
+├── Web APIs / Node APIs
+│     ├── Handles async operations outside JS engine
+│     ├── Examples:
+│     │      ├── setTimeout / setInterval
+│     │      ├── fetch / AJAX / XHR
+│     │      ├── DOM events
+│     │      ├── File system (Node.js)
+│     │      └── Timers & network I/O (Node.js)
+│     └── Sends completed tasks to queues
+│
+├── Microtask Queue (High Priority)
+│     ├── Contains:
+│     │      ├── Promise.then()
+│     │      ├── Promise.catch()
+│     │      ├── async/await continuation
+│     │      ├── queueMicrotask()
+│     │      └── MutationObserver
+│     ├── Runs BEFORE any macrotask
+│     └── Runs ALL microtasks until queue is empty
+│
+├── Macrotask Queue (Task Queue)
+│     ├── Contains:
+│     │      ├── setTimeout callbacks
+│     │      ├── setInterval callbacks
+│     │      ├── DOM event callbacks
+│     │      ├── MessageChannel
+│     │      └── setImmediate (Node.js)
+│     ├── Lower priority than microtasks
+│     └── Event Loop runs ONE macrotask per cycle
+│
+└── Event Loop
+      ├── The central scheduler
+      ├── Checks if Call Stack is empty
+      ├── If empty → run ALL Microtasks
+      ├── After microtasks → run ONE Macrotask
+      ├── Repeats this cycle continuously
+      └── Makes JS appear asynchronous despite a single thread

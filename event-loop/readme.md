@@ -80,3 +80,15 @@ The runtime consists of several key parts that work together to execute your cod
       ├── Repeats this cycle continuously
       └── Makes JS appear asynchronous despite a single thread
 ```
+---
+### Starvation of Callback Function (Macrotask Starvation)
+Microtasks are like VIP tasks.
+They always run before macrotasks.
+
+If microtasks keep generating more microtasks:
+
+➡️ Macrotasks never get CPU time
+➡️ Timers, events, callbacks get “starved”
+
+This is callback starvation.
+---

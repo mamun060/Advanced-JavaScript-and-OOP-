@@ -115,6 +115,7 @@ obj.a = 99; // OK (mutation)
 ```
 
 ## Diagram — Scope & Hoisting (Simple View)
+```js 
 Global Scope
 ├── var (function scoped)
 ├── let (block scoped)
@@ -124,8 +125,35 @@ Hoisting:
 var     → hoisted + initialized as undefined
 let     → hoisted (TDZ until declaration line)
 const   → hoisted (TDZ until declaration line)
-
+```
 ### visual example
-![1. Memory Allocation Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190233273714/1.webp)
-![2. Code Execution Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190347338322/3.webp)
-![3. Final Memory State](https://media.geeksforgeeks.org/wp-content/uploads/20250926190417324362/4.webp)
+## 1. Memory Allocation Phase
+
+In this phase, memory is allocated for all variables. Since we are using `let`, the variables are hoisted but kept in the **Temporal Dead Zone (TDZ)** until they are initialized.
+
+![Memory Allocation Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190233273714/1.webp)
+
+---
+
+## 2. Code Execution Phase
+
+JavaScript is single-threaded, so it executes code **line by line**.
+
+- **Line 1:** `let x = 2;` → `x` is assigned the value `2`.
+- **Line 2:** `let y = x * x;` → JavaScript fetches `x`, computes `2 * 2`, and assigns `4` to `y`.
+- **Line 3:** `console.log(y);` → prints `4` to the console.
+
+![Code Execution Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190347338322/3.webp)
+
+---
+
+## 3. Final Memory State
+
+At the end of execution:
+
+- `x` → `2`
+- `y` → `4`
+
+So `console.log(y)` outputs `4`.
+
+![Final Memory State](https://media.geeksforgeeks.org/wp-content/uploads/20250926190417324362/4.webp)

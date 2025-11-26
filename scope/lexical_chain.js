@@ -1,4 +1,4 @@
-// Example of lexical chain is one kind of clouse ( parent child relationship)
+// Example of lexical chain is one kind of clouser ( parent child relationship)
 let a = 10; // global scope
 function outer(){
     let b = 20; // parent scope 

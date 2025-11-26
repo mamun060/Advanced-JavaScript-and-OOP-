@@ -91,5 +91,4 @@ Lexical” মানে হলো:
 What is Lexical Chain (Scope Chain)?
 Lexical Chain হলো:
   একটার ভিতরে আরেকটা function / block তৈরি হলে,
-  তাদের parent scopes গুলোকে যে link বা chain ধরে JS খুঁজে variable বের করে — সেই chain ই হলো Lexical Chain।
-একে scope chain ও বলা হয়।
+  তাদের parent scopes গুলোকে যে link বা chain ধরে JS খুঁজে variable বের করে — সেই chain ই হলো Lexical Chain। একে scope chain ও বলা হয়।

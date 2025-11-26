@@ -124,3 +124,8 @@ Hoisting:
 var     → hoisted + initialized as undefined
 let     → hoisted (TDZ until declaration line)
 const   → hoisted (TDZ until declaration line)
+
+### visual example
+![1. Memory Allocation Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190233273714/1.webp)
+![2. Code Execution Phase](https://media.geeksforgeeks.org/wp-content/uploads/20250926190347338322/3.webp)
+![3. Final Memory State](https://media.geeksforgeeks.org/wp-content/uploads/20250926190417324362/4.webp)

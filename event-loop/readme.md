@@ -13,25 +13,26 @@ This seemingly contradictory behavior is made possible by the JavaScript runtime
 The runtime consists of several key parts that work together to execute your code.
 
 ```js
-                               ┌──────────────────┐
-                               │    Call Stack    │
-                               └──────────────────┘
-                                       ▲
-                                       │
-                            ┌──────────────────┐
-                            │    Event Loop    │
-                            └──────────────────┘
-                              ▲             │
-                              │             ▼
-┌─────────────────────────┐   │   ┌──────────────────────┐
-│     Microtask Queue     │◄──┘   │  Web APIs / Node APIs│
-│ (Promises, async/await) │       └──────────────────────┘
-└─────────────────────────┘                   │
-                                              ▼
-                                    ┌──────────────────┐
-                                    │     Task Queue   │
-                                    │   (Macrotasks)   │
-                                    └──────────────────┘
+                ┌──────────────────┐
+                │    Call Stack    │
+                └──────────────────┘
+                        ▲
+                        │  (Event Loop pulls tasks)
+                ┌──────────────────┐
+                │    Event Loop    │
+                └──────────────────┘
+                   ▲           ▲
+                   │           │
+     ┌──────────────────┐   ┌──────────────────┐
+     │ Microtask Queue  │   │  Macrotask Queue │
+     │ (Promises, etc.) │   │ (Timers, events) │
+     └──────────────────┘   └──────────────────┘
+                   ▲           ▲
+                   │           │
+           ┌─────────────────────────┐
+           │  Web APIs / Node APIs   │
+           └─────────────────────────┘
+
 ```
 #### Call Stack 
 ```

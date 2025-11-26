@@ -5,7 +5,6 @@ Without Web APIs, JavaScript by itself cannot perform:
 ->setTimeout() / setInterval()
 ->DOM events (click, scroll, input)
 ->fetch() / AJAX network requests
-->Promises (microtasks)
 ->Geolocation
 ->Local storage & session storage
 ->Canvas drawing

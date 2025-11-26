@@ -126,6 +126,26 @@ var     → hoisted + initialized as undefined
 let     → hoisted (TDZ until declaration line)
 const   → hoisted (TDZ until declaration line)
 ```
+---
+### 3. What does “automatic hoisting” mean?
+JS Engine Phase 1: Creation Phase
+
+It reads your whole code (before executing it)
+
+Builds Global Execution Context or Function Execution Context
+
+Creates a memory space for all variables & functions
+
+During this phase:
+
+1. Function declarations: Stored fully (you can call them before writing them)
+
+2. var: Created and initialized to undefined
+
+3. let / const: Created but not initialized
+👉 This “uninitialized time window” is the Temporal Dead Zone (TDZ)
+---
+
 ### visual example
 ## 1. Memory Allocation Phase
 

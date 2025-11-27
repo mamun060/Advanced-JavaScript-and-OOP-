@@ -2,7 +2,7 @@
 function parent(){
     let name = "Al Mamun";
     function child(){
-        name = "Shisir";
+        name = "Arishfa";
         console.log(name);
     }
     child();

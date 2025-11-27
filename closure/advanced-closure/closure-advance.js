@@ -38,5 +38,12 @@ function outerFunction(){
 }
 
 outerFunction();
+
+// Here, I am actually creating a closure.
+// When outerFunction() returns innerFunction, JavaScript does not destroy:
+// first, second, result
+// Even though outerFunction has finished running, the returned innerFunction still remembers the outer scope values.
+// This is a closure.
+
 let checkInner = outerFunction();
 checkInner();

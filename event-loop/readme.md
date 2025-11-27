@@ -87,7 +87,7 @@ They always run before macrotasks.
 
 If microtasks keep generating more microtasks:
 
-➡️ Macrotasks never get CPU time
+➡️ Macrotasks never get CPU time.
 ➡️ Timers, events, callbacks get “starved”
 
 This is callback starvation.

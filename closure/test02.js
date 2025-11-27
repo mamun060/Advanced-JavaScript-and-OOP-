@@ -9,7 +9,8 @@ function Parent() {
       console.log('I am child of globalFunc')
     }
   
-    Child();
-  }
+    return Child;
+}
   
-  Parent();
+// const child = Parent();
+Parent()();

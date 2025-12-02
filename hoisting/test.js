@@ -13,5 +13,5 @@ console.log(topu)
 var topu ='Hello Topu'
 
 // let's try another one
-console.log(sonia);
-var sonia = 'Hey Sonaya how are you!'
+console.log(tonu);
+var tonu = 'Hey Sonaya how are you!'

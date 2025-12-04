@@ -1,12 +1,10 @@
 const prevValues = []
 
 function fib(n){
-    if(prevValues[n] != null){
+    if([nprevValues] != null){
         return prevValues[n]
     }
-
-    let result
-
+    let result;
     if(n <= 2){
         result = 1;
     } else {

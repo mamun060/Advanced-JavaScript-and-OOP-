@@ -4,7 +4,7 @@ A JavaScript engine is a program or an interpreter that executes JavaScript code
 
 ---
 
-## 🛠️ The Architecture of a JS Engine
+## The Architecture of a JS Engine
 
 The engine doesn't just "read" code; it transforms it through several complex stages to make it understandable for the computer's CPU.
 
@@ -25,7 +25,7 @@ The execution happens using two main components:
 
 ---
 
-## 🔄 The Execution Pipeline
+## The Execution Pipeline
 
 | Stage | Process | Output |
 | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ The execution happens using two main components:
 
 ---
 
-## 🧠 Mutable vs Immutable in Engine Memory
+## Mutable vs Immutable in Engine Memory
 
 When the JS Engine handles data, it treats memory differently based on the type:
 
@@ -49,7 +49,7 @@ When the JS Engine handles data, it treats memory differently based on the type:
 
 ---
 
-## 🚀 Popular JS Engines
+## Popular JS Engines
 * **V8:** Google Chrome, Node.js, Brave.
 * **SpiderMonkey:** Firefox (The first-ever JS engine).
 * **JavaScriptCore:** Safari (Nitro).
@@ -57,4 +57,28 @@ When the JS Engine handles data, it treats memory differently based on the type:
 
 ---
 
+## Memory Management: Call Stack & Memory Heap
+
+JavaScript ইঞ্জিন যখন আপনার কোড রান করে, তখন সেটি ডেটা এবং এক্সিকিউশন ম্যানেজ করার জন্য দুটি প্রধান জায়গা ব্যবহার করে।
+
+### 1. Memory Heap (The Storage)
+মেমোরি হিপ হলো একটি বড় আন-অর্গানাইজড জায়গা যেখানে জাভাস্ক্রিপ্ট সমস্ত **Objects, Arrays, এবং Functions** স্টোর করে। 
+* এটি একটি "Free-store" মেমোরি।
+* এখানে ডেটা এলোমেলোভাবে থাকে, কারণ অবজেক্টের সাইজ যেকোনো সময় বাড়তে বা কমতে পারে (**Mutable**)।
+
+### 2. Call Stack (The Action)
+কল স্ট্যাক হলো একটি সুশৃঙ্খল জায়গা যেখানে কোড লাইন-বাই-লাইন এক্সিকিউট হয়। এটি **LIFO (Last In, First Out)** মেকানিজম মেনে চলে।
+* এখানে **Primitive values** (String, Number, Boolean) সরাসরি স্টোর হয়।
+* এটি ট্র্যাক করে যে বর্তমানে কোন ফাংশনটি রান করছে এবং এরপর কোনটি করবে।
+
+---
+
+## 🔄 How they work together (Example)
+
+ধরা যাক আপনি নিচের কোডটি লিখলেন:
+```javascript
+const name = "Al Mamun";      // Primitive (Goes to Stack)
+const user = { id: 101 };     // Object (Stored in Heap, Reference in Stack)
+
+---
 > **Key Takeaway:** The JS Engine is why JavaScript is fast. It constantly watches your code as it runs and optimizes it on the fly!

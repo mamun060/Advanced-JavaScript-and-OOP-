@@ -1,0 +1,1 @@
+// hoisting is the default behavior of moving all the declarations at the top of the scope before code execution.

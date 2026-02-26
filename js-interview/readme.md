@@ -37,3 +37,6 @@
 28. Explain Generators and Iterators in JavaScript.
 29. What are ES6 Modules, and how are they different from CommonJS?
 30. How do you prevent memory leaks in JavaScript?
+31. Explain troughtolling and Debouncing in javascript?
+32. How do you prevent default actions and stop event propagation in JavaScript?
+

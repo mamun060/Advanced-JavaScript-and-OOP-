@@ -1,0 +1,19 @@
+{
+    "userId": 12345,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "isActive": true,
+    "preferences": {
+        "theme": "dark",
+        "notifications": true
+    },
+    "profile": {
+        "bio": "Software developer with a passion for open source.",
+        "website": "https://johndoe.dev",
+        "social": {
+            "twitter": "@johndoe",
+            "github": "johndoe"
+        }
+    },
+    "lastLogin": "2023-10-01T12:00:00Z"
+}

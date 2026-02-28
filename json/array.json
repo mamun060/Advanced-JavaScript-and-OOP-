@@ -1,0 +1,29 @@
+{
+    "skills": ["JavaScript", "Python", "Java", "C++"],
+    "cars": [
+        {
+            "name": "BMW",
+            "models": [
+                "X5",
+                "X6",
+                "X7"
+            ]
+        },
+        {
+            "name": "Audi",
+            "models": [
+                "A4",
+                "A6",
+                "A8"
+            ]
+        },
+        {
+            "name": "Mercedes",
+            "models": [
+                "C-Class",
+                "E-Class",
+                "S-Class"
+            ]
+        }
+    ]
+}

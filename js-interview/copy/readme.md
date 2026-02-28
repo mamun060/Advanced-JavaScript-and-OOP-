@@ -4,7 +4,7 @@
 
 ---
 
-## 🟦 Shallow Copy (উপর উপর কপি)
+## Shallow Copy (উপর উপর কপি)
 
 ### কী?
 

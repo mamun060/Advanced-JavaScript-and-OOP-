@@ -13,9 +13,9 @@
 ### Promise States
 **A Promise has 3 states:**
 
-*1️-pending: → The async operation has started but not finished
-*2-fulfilled: → The operation succeeded → resolve() was called
-*3-rejected: → The operation failed → reject() was called
+1. pending: → The async operation has started but not finished
+2. -fulfilled: → The operation succeeded → resolve() was called
+3. rejected: → The operation failed → reject() was called
 ---
 ### How Promises Work (Simple Flow)
 ```js

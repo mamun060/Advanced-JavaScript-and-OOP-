@@ -5,6 +5,7 @@
 JavaScript is fundamentally a **single-threaded**, **synchronous** language. This means it can only execute one piece of code at a time in a specific order. However, it can perform non-blocking, asynchronous operations like fetching data from a server or handling user input.
 
 This seemingly contradictory behavior is made possible by the JavaScript runtime environment (like a browser or Node.js) and its core component: the **Event Loop**.
+---
 ***IN Bangla***
 **JavaScript-এর Event Loop হলো এমন একটি মেকানিজম যা নির্ধারণ করে আপনার কোড কখন এবং কীভাবে এক্সিকিউট হবে। জাভাস্ক্রিপ্ট হলো Single-threaded, অর্থাৎ এটি একবারে মাত্র একটি কাজ করতে পারে। কিন্তু আমরা যখন API কল করি বা টাইমার সেট করি, তখন জাভাস্ক্রিপ্ট আটকে না থেকে কাজ চালিয়ে যায়—এই ম্যাজিকটিই ঘটে Event Loop-এর কারণে।**
 
